@@ -18,7 +18,7 @@ export default function Navigation() {
   return (
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
       <div className="container-max">
-        <div className="flex items-center justify-between py-3 md:py-4">
+        <div className="flex items-center justify-between py-3 md:py-4 px-4 md:px-0">
           {/* Logo */}
           <div className="flex items-center">
             <div className="h-8 md:h-10 flex items-center">
@@ -58,9 +58,10 @@ export default function Navigation() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 text-navy hover:text-gold transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-opacity-50 rounded-lg"
+            className="md:hidden p-2 text-navy hover:text-gold transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-opacity-50 rounded-lg z-50 relative"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle mobile menu"
+            type="button"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -68,7 +69,7 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200 shadow-lg">
+          <div className="md:hidden bg-white border-t border-gray-200 shadow-lg absolute top-full left-0 right-0 z-40">
             <div className="px-4 py-4 space-y-4">
               {navItems.map((item) => (
                 <a

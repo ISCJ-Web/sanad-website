@@ -54,11 +54,11 @@ export default function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 md:mb-12 px-4">
-            <button className="btn-primary text-base md:text-lg px-6 md:px-8 py-3 md:py-4 flex items-center space-x-2 w-full sm:w-auto">
+            <button className="btn-primary text-base md:text-lg px-6 md:px-8 py-3 md:py-4 flex items-center justify-center space-x-2 w-full sm:w-auto text-center">
               <span>Learn More</span>
               <ArrowRight size={20} />
             </button>
-            <button className="btn-secondary text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto">
+            <button className="btn-secondary text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto text-center">
               Join Us Today
             </button>
           </div>
