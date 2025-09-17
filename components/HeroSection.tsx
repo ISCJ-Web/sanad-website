@@ -22,10 +22,10 @@ export default function HeroSection() {
           {/* Logo */}
           <div className="mb-8">
             <div className="w-64 h-32 flex items-center justify-center mx-auto mb-6">
-              <img 
-                src="/images/logo/sanad-logo.png" 
-                alt="Sanad Institute Logo" 
-                className="h-full w-auto object-contain"
+                      <img 
+                        src="/sanad-website/images/logo/sanad-logo.png" 
+                        alt="Sanad Institute Logo" 
+                        className="h-full w-auto object-contain"
                 onError={(e) => {
                   // Fallback to text logo if image fails to load
                   const target = e.target as HTMLImageElement;

@@ -11,10 +11,10 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <div className="h-10 flex items-center">
-                <img 
-                  src="/images/logo/sanad-logo-white.png"
-                  alt="Sanad Institute Logo" 
-                  className="h-full w-auto object-contain"
+                        <img 
+                          src="/sanad-website/images/logo/sanad-logo-white.png" 
+                          alt="Sanad Institute Logo" 
+                          className="h-full w-auto object-contain"
                   onError={(e) => {
                     // Fallback to text logo if image fails to load
                     const target = e.target as HTMLImageElement;
