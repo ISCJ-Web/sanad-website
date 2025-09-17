@@ -18,6 +18,16 @@ interface Instructor {
 const instructors: Instructor[] = [
   {
     id: 1,
+    name: "Shaykh Ismail Bowers",
+    slug: "shaykh-ismail-bowers",
+    title: "Resident Scholar",
+    affiliation: "University of Oxford",
+    specialization: "Hadith Sciences & Islamic Theology",
+    image: getImagePath("/images/instructors/instructor-3.jpg"),
+    bio: "Completed traditional ʿĀlimiyyah program at Al-Qarawiyyin in Fes, Morocco. Master's from Emory University, currently pursuing Ph.D. at Oxford. Co-founder of Pillars Seminary and Resident Scholar."
+  },
+  {
+    id: 2,
     name: "Dr. Mounia Mnouer",
     slug: "dr-mounia-mnouer",
     title: "Arabic Language Specialist",
@@ -27,7 +37,7 @@ const instructors: Instructor[] = [
     bio: "Moroccan academic specializing in Arabic language, curriculum design, and cross-cultural studies. Currently Lecturer in Arabic at Princeton University with extensive teaching experience in Morocco and the United States."
   },
   {
-    id: 2,
+    id: 3,
     name: "Shaykh Ahmed Ashour",
     slug: "shaykh-ahmed-ashour",
     title: "Islamic Studies Scholar",
@@ -35,16 +45,6 @@ const instructors: Instructor[] = [
     specialization: "Islamic Law & Arabic Linguistics",
     image: getImagePath("/images/instructors/instructor-2.jpg"),
     bio: "Scholar with classical training at Al-Azhar University. Earned Ijāzah ʿĀliyah in Arabic Language and Islamic Studies, with expertise in fiqh, usūl, hadith, tafsīr, and Arabic linguistics."
-  },
-  {
-    id: 3,
-    name: "Shaykh Ismail Bowers",
-    slug: "shaykh-ismail-bowers",
-    title: "Resident Scholar",
-    affiliation: "University of Oxford",
-    specialization: "Hadith Sciences & Islamic Theology",
-    image: getImagePath("/images/instructors/instructor-3.jpg"),
-    bio: "Completed traditional ʿĀlimiyyah program at Al-Qarawiyyin in Fes, Morocco. Master's from Emory University, currently pursuing Ph.D. at Oxford. Co-founder of Pillars Seminary and Resident Scholar."
   },
   {
     id: 4,
