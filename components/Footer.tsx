@@ -1,6 +1,7 @@
 'use client'
 
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram } from 'lucide-react'
+import { getImagePath } from '@/utils/imagePath'
 
 export default function Footer() {
   return (
@@ -12,7 +13,7 @@ export default function Footer() {
             <div className="flex items-center space-x-3 mb-4">
               <div className="h-10 flex items-center">
                         <img 
-                          src="/sanad-website/images/logo/sanad-logo-white.png" 
+                          src={getImagePath("/images/logo/sanad-logo-white.png")} 
                           alt="Sanad Institute Logo" 
                           className="h-full w-auto object-contain"
                   onError={(e) => {

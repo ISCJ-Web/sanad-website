@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { getImagePath } from '@/utils/imagePath'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -22,7 +23,7 @@ export default function Navigation() {
           <div className="flex items-center space-x-3">
             <div className="h-10 flex items-center">
                       <img 
-                        src="/sanad-website/images/logo/sanad-logo.png" 
+                        src={getImagePath("/images/logo/sanad-logo.png")} 
                         alt="Sanad Institute Logo" 
                         className="h-full w-auto object-contain"
                 onError={(e) => {

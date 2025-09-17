@@ -2,8 +2,8 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: '/sanad-website',
-  assetPrefix: '/sanad-website/',
+  basePath: process.env.NODE_ENV === 'production' ? '/sanad-website' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/sanad-website/' : '',
   images: {
     unoptimized: true
   },
