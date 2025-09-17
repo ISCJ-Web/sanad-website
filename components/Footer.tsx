@@ -1,3 +1,5 @@
+'use client'
+
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram } from 'lucide-react'
 
 export default function Footer() {
@@ -7,25 +9,38 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-gold to-gold-light rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">S</span>
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="h-10 flex items-center">
+                <img 
+                  src="/images/logo/sanad-logo-white.png"
+                  alt="Sanad Institute Logo" 
+                  className="h-full w-auto object-contain"
+                  onError={(e) => {
+                    // Fallback to text logo if image fails to load
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const fallback = target.nextElementSibling as HTMLElement;
+                    if (fallback) fallback.style.display = 'flex';
+                  }}
+                />
+                <div className="w-10 h-10 bg-gradient-to-br from-gold to-gold-light rounded-lg flex items-center justify-center hidden">
+                  <span className="text-white font-bold text-xl">S</span>
+                </div>
               </div>
-              <span className="text-2xl font-display font-bold">Sanad Institute</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
               Dedicated to providing authentic Islamic education and fostering spiritual growth 
               through comprehensive learning programs and community engagement.
             </p>
             <div className="flex space-x-4">
+              <a href="https://www.instagram.com/sanad_institute/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-gold transition-colors">
+                <Instagram size={20} />
+              </a>
               <a href="#" className="text-gray-300 hover:text-gold transition-colors">
                 <Facebook size={20} />
               </a>
               <a href="#" className="text-gray-300 hover:text-gold transition-colors">
                 <Twitter size={20} />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-gold transition-colors">
-                <Instagram size={20} />
               </a>
             </div>
           </div>

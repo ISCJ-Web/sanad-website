@@ -19,11 +19,24 @@ export default function Navigation() {
       <div className="container-max">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-gold to-gold-light rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">S</span>
+          <div className="flex items-center space-x-3">
+            <div className="h-10 flex items-center">
+              <img 
+                src="/images/logo/sanad-logo.png" 
+                alt="Sanad Institute Logo" 
+                className="h-full w-auto object-contain"
+                onError={(e) => {
+                  // Fallback to text logo if image fails to load
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const fallback = target.nextElementSibling as HTMLElement;
+                  if (fallback) fallback.style.display = 'flex';
+                }}
+              />
+              <div className="h-10 w-auto bg-gradient-to-br from-gold to-gold-light rounded-lg flex items-center justify-center px-3 hidden">
+                <span className="text-white font-bold text-lg">Sanad</span>
+              </div>
             </div>
-            <span className="text-2xl font-display font-bold text-navy">Sanad</span>
           </div>
 
           {/* Desktop Navigation */}

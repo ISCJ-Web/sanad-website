@@ -21,12 +21,23 @@ export default function HeroSection() {
         <div className="max-w-4xl mx-auto">
           {/* Logo */}
           <div className="mb-8">
-            <div className="w-24 h-24 bg-gradient-to-br from-gold to-gold-light rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
-              <span className="text-white font-bold text-4xl">S</span>
+            <div className="w-64 h-32 flex items-center justify-center mx-auto mb-6">
+              <img 
+                src="/images/logo/sanad-logo.png" 
+                alt="Sanad Institute Logo" 
+                className="h-full w-auto object-contain"
+                onError={(e) => {
+                  // Fallback to text logo if image fails to load
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const fallback = target.nextElementSibling as HTMLElement;
+                  if (fallback) fallback.style.display = 'flex';
+                }}
+              />
+              <div className="w-24 h-24 bg-gradient-to-br from-gold to-gold-light rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl hidden">
+                <span className="text-white font-bold text-4xl">S</span>
+              </div>
             </div>
-            <h1 className="text-6xl md:text-8xl font-display font-bold text-navy mb-4 tracking-tight">
-              Sanad <span className="text-gradient">Institute</span>
-            </h1>
           </div>
 
           {/* Tagline */}

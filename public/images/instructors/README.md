@@ -13,10 +13,10 @@ This folder contains the profile pictures for Sanad Institute instructors.
 
 Name your images exactly as follows:
 
-- `instructor-1.jpg` - Dr. Ahmad Al-Rashid
-- `instructor-2.jpg` - Sheikh Fatima Al-Zahra  
-- `instructor-3.jpg` - Dr. Yusuf Al-Mansouri
-- `instructor-4.jpg` - Ustadha Aisha Al-Qurashi
+- `instructor-1.jpg` - Dr. Mounia Mnouer (Arabic Language Specialist, Princeton University)
+- `instructor-2.jpg` - Shaykh Ahmed Ashour (Islamic Studies Scholar, Al-Azhar University)  
+- `instructor-3.jpg` - Shaykh Ismail Bowers (Resident Scholar, University of Oxford)
+- `instructor-4.jpg` - Shaykh Meurad Osman (Islamic Law Instructor, World Islamic Sciences University)
 
 ## How to Add Images
 
