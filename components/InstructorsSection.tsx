@@ -62,26 +62,26 @@ export default function InstructorsSection() {
   return (
     <section id="instructors" className="section-padding bg-cream">
       <div className="container-max">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-display font-bold text-navy mb-6 tracking-tight">
+        <div className="text-center mb-12 md:mb-16 px-4">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-navy mb-4 md:mb-6 tracking-tight">
             Our <span className="text-gradient">Instructors</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
             Learn from distinguished scholars and educators who bring decades of experience 
             and authentic knowledge to our institute.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto px-4">
           {instructors.map((instructor, index) => (
             <div
               key={instructor.id}
-              className="card p-6 group hover:shadow-2xl transition-all duration-500"
+              className="card p-4 md:p-6 group hover:shadow-2xl transition-all duration-500"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Profile Image */}
-              <div className="relative mb-4">
-                <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-gold to-gold-light p-1 group-hover:scale-110 transition-transform duration-300">
+              <div className="relative mb-3 md:mb-4">
+                <div className="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-full bg-gradient-to-br from-gold to-gold-light p-1 group-hover:scale-110 transition-transform duration-300">
                   <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
                     <img 
                       src={instructor.image} 
@@ -111,22 +111,22 @@ export default function InstructorsSection() {
 
               {/* Content */}
               <div className="text-center relative z-10">
-                <h3 className="text-lg font-display font-bold text-navy mb-2 group-hover:text-gold transition-colors">
+                <h3 className="text-base md:text-lg font-display font-bold text-navy mb-1 md:mb-2 group-hover:text-gold transition-colors">
                   {instructor.name}
                 </h3>
-                <p className="text-gold font-semibold mb-2 text-sm">{instructor.title}</p>
-                <div className="flex items-center justify-center mb-2">
-                  <Globe className="text-gray-400 mr-2" size={12} />
+                <p className="text-gold font-semibold mb-1 md:mb-2 text-xs md:text-sm">{instructor.title}</p>
+                <div className="flex items-center justify-center mb-1 md:mb-2">
+                  <Globe className="text-gray-400 mr-1 md:mr-2" size={10} />
                   <span className="text-xs text-gray-600">{instructor.affiliation}</span>
                 </div>
-                <div className="flex items-center justify-center mb-3">
-                  <BookOpen className="text-gray-400 mr-2" size={12} />
+                <div className="flex items-center justify-center mb-2 md:mb-3">
+                  <BookOpen className="text-gray-400 mr-1 md:mr-2" size={10} />
                   <span className="text-xs text-gray-600">{instructor.specialization}</span>
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                <p className="text-gray-600 text-xs md:text-sm leading-relaxed mb-3 md:mb-4">
                   {instructor.bio}
                 </p>
-                <Link href={`/instructors/${instructor.slug}`} className="btn-secondary text-xs px-4 py-2 relative z-20">
+                <Link href={`/instructors/${instructor.slug}`} className="btn-secondary text-xs px-3 md:px-4 py-1.5 md:py-2 relative z-20">
                   Learn More
                 </Link>
               </div>

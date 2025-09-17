@@ -18,14 +18,14 @@ export default function Navigation() {
   return (
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
       <div className="container-max">
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-3 md:py-4">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="h-10 flex items-center">
-                      <img 
-                        src={getImagePath("/images/logo/sanad-logo.png")} 
-                        alt="Sanad Institute Logo" 
-                        className="h-full w-auto object-contain"
+          <div className="flex items-center">
+            <div className="h-8 md:h-10 flex items-center">
+              <img 
+                src={getImagePath("/images/logo/sanad-logo.png")} 
+                alt="Sanad Institute Logo" 
+                className="h-full w-auto object-contain"
                 onError={(e) => {
                   // Fallback to text logo if image fails to load
                   const target = e.target as HTMLImageElement;
@@ -34,8 +34,8 @@ export default function Navigation() {
                   if (fallback) fallback.style.display = 'flex';
                 }}
               />
-              <div className="h-10 w-auto bg-gradient-to-br from-gold to-gold-light rounded-lg flex items-center justify-center px-3 hidden">
-                <span className="text-white font-bold text-lg">Sanad</span>
+              <div className="h-8 md:h-10 w-auto bg-gradient-to-br from-gold to-gold-light rounded-lg flex items-center justify-center px-2 md:px-3 hidden">
+                <span className="text-white font-bold text-sm md:text-lg">Sanad</span>
               </div>
             </div>
           </div>
@@ -58,8 +58,9 @@ export default function Navigation() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 text-navy hover:text-gold transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-opacity-50 rounded-lg"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle mobile menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -67,19 +68,22 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
-            <div className="flex flex-col space-y-4">
+          <div className="md:hidden bg-white border-t border-gray-200 shadow-lg">
+            <div className="px-4 py-4 space-y-4">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-navy hover:text-gold transition-colors duration-300 font-medium"
+                  className="block text-navy hover:text-gold transition-colors duration-300 font-medium py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <button className="btn-primary w-full mt-4">
+              <button 
+                className="btn-primary w-full mt-4"
+                onClick={() => setIsOpen(false)}
+              >
                 Join Us
               </button>
             </div>
