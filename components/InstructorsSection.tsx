@@ -17,7 +17,7 @@ const instructors: Instructor[] = [
     title: "Senior Scholar",
     affiliation: "Al-Azhar University",
     specialization: "Quranic Studies & Tafsir",
-    image: "/api/placeholder/200/200",
+    image: "/images/instructors/instructor-1.jpg",
     bio: "Over 20 years of experience in Quranic interpretation and Islamic jurisprudence."
   },
   {
@@ -26,7 +26,7 @@ const instructors: Instructor[] = [
     title: "Arabic Language Specialist",
     affiliation: "Islamic University of Medina",
     specialization: "Arabic Grammar & Literature",
-    image: "/api/placeholder/200/200",
+    image: "/images/instructors/instructor-2.jpg",
     bio: "Expert in classical Arabic and modern teaching methodologies."
   },
   {
@@ -35,7 +35,7 @@ const instructors: Instructor[] = [
     title: "Hadith Scholar",
     affiliation: "Darul Uloom Deoband",
     specialization: "Hadith Sciences & Islamic History",
-    image: "/api/placeholder/200/200",
+    image: "/images/instructors/instructor-3.jpg",
     bio: "Renowned scholar specializing in authentic hadith transmission and verification."
   },
   {
@@ -44,26 +44,8 @@ const instructors: Instructor[] = [
     title: "Islamic Studies Instructor",
     affiliation: "International Islamic University",
     specialization: "Fiqh & Islamic Law",
-    image: "/api/placeholder/200/200",
+    image: "/images/instructors/instructor-4.jpg",
     bio: "Dedicated educator with expertise in Islamic jurisprudence and women's studies."
-  },
-  {
-    id: 5,
-    name: "Sheikh Omar Al-Baghdadi",
-    title: "Spiritual Guide",
-    affiliation: "Naqshbandi Sufi Order",
-    specialization: "Tasawwuf & Spiritual Development",
-    image: "/api/placeholder/200/200",
-    bio: "Spiritual mentor guiding students on the path of inner purification and divine connection."
-  },
-  {
-    id: 6,
-    name: "Dr. Khadija Al-Andalusi",
-    title: "Islamic History Professor",
-    affiliation: "University of Granada",
-    specialization: "Islamic Civilization & History",
-    image: "/api/placeholder/200/200",
-    bio: "Historian specializing in Islamic civilization and its contributions to world knowledge."
   }
 ]
 
@@ -92,7 +74,19 @@ export default function InstructorsSection() {
               <div className="relative mb-6">
                 <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-gold to-gold-light p-1 group-hover:scale-110 transition-transform duration-300">
                   <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
-                    <div className="w-full h-full bg-gradient-to-br from-navy-light to-navy flex items-center justify-center">
+                    <img 
+                      src={instructor.image} 
+                      alt={instructor.name}
+                      className="w-full h-full object-cover rounded-full"
+                      onError={(e) => {
+                        // Fallback to initials if image fails to load
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        const fallback = target.nextElementSibling as HTMLElement;
+                        if (fallback) fallback.style.display = 'flex';
+                      }}
+                    />
+                    <div className="w-full h-full bg-gradient-to-br from-navy-light to-navy flex items-center justify-center hidden">
                       <span className="text-white font-bold text-2xl">
                         {instructor.name.split(' ').map(n => n[0]).join('')}
                       </span>
