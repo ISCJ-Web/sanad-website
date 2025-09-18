@@ -1,4 +1,4 @@
-import { Target, Eye, BookOpen, Users } from 'lucide-react'
+import { Target, Eye } from 'lucide-react'
 
 export default function AboutSection() {
   return (
@@ -9,8 +9,9 @@ export default function AboutSection() {
             About <span className="text-gradient">Sanad Institute</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We are dedicated to preserving and sharing authentic Islamic knowledge while 
-            fostering a welcoming community of learners and scholars.
+            We are dedicated to preserving the chain of authentic knowledge—fostering unity, 
+            guarding against misguidance, and equipping Muslims to navigate modern challenges 
+            with grounding in tradition.
           </p>
         </div>
 
@@ -54,48 +55,6 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Values */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-gold to-gold-light rounded-full flex items-center justify-center mx-auto mb-4">
-              <BookOpen className="text-white" size={32} />
-            </div>
-            <h4 className="text-xl font-display font-semibold text-navy mb-3">Authenticity</h4>
-            <p className="text-gray-600 text-sm">
-              Rooted in traditional Islamic scholarship and authentic sources of knowledge.
-            </p>
-          </div>
-
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-gold to-gold-light rounded-full flex items-center justify-center mx-auto mb-4">
-              <Users className="text-white" size={32} />
-            </div>
-            <h4 className="text-xl font-display font-semibold text-navy mb-3">Community</h4>
-            <p className="text-gray-600 text-sm">
-              Building strong bonds of brotherhood and sisterhood among learners.
-            </p>
-          </div>
-
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-gold to-gold-light rounded-full flex items-center justify-center mx-auto mb-4">
-              <Target className="text-white" size={32} />
-            </div>
-            <h4 className="text-xl font-display font-semibold text-navy mb-3">Excellence</h4>
-            <p className="text-gray-600 text-sm">
-              Committed to the highest standards of teaching and learning.
-            </p>
-          </div>
-
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-gold to-gold-light rounded-full flex items-center justify-center mx-auto mb-4">
-              <Eye className="text-white" size={32} />
-            </div>
-            <h4 className="text-xl font-display font-semibold text-navy mb-3">Innovation</h4>
-            <p className="text-gray-600 text-sm">
-              Embracing modern methods while preserving traditional wisdom.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   )

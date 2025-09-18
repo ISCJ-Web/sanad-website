@@ -1,21 +1,30 @@
 'use client'
 
 import { ArrowRight, BookOpen, Award, Clock } from 'lucide-react'
-import { getImagePath } from '@/utils/imagePath'
 
 export default function HeroSection() {
+  const scrollToAbout = () => {
+    const universitySection = document.getElementById('university-bar');
+    if (universitySection) {
+      const navbarHeight = 80; // Account for navbar height
+      const elementPosition = universitySection.offsetTop;
+      const offsetPosition = elementPosition - navbarHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-20">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-20 pb-16 md:pb-20">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-32 h-32 border border-gold rounded-full"></div>
         <div className="absolute top-40 right-20 w-24 h-24 border border-navy rounded-full"></div>
         <div className="absolute bottom-40 left-20 w-40 h-40 border border-gold rounded-full"></div>
         <div className="absolute bottom-20 right-10 w-28 h-28 border border-navy rounded-full"></div>
-        
-        {/* Geometric patterns */}
-        <div className="absolute top-1/4 left-1/4 w-16 h-16 transform rotate-45 border-2 border-gold"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-12 h-12 transform rotate-12 border-2 border-navy"></div>
       </div>
 
       <div className="container-max text-center z-10 px-4">
@@ -23,10 +32,10 @@ export default function HeroSection() {
           {/* Logo */}
           <div className="mb-6 md:mb-8">
             <div className="w-64 md:w-80 lg:w-96 h-32 md:h-40 lg:h-48 flex items-center justify-center mx-auto mb-4 md:mb-6">
-              <img 
-                src={getImagePath("/images/logo/sanad-hero-logo.png")} 
-                alt="Sanad Institute Hero Logo" 
-                className="h-full w-auto object-contain"
+                      <img
+                        src="/images/logo/sanad-hero-logo.png"
+                        alt="Sanad Institute Hero Logo"
+                        className="h-full w-auto object-contain"
                 onError={(e) => {
                   // Fallback to text logo if image fails to load
                   const target = e.target as HTMLImageElement;
@@ -53,7 +62,10 @@ export default function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 md:mb-12 px-4">
-            <button className="btn-primary text-base md:text-lg px-6 md:px-8 py-3 md:py-4 flex items-center justify-center space-x-2 w-full sm:w-auto text-center">
+            <button 
+              onClick={scrollToAbout}
+              className="btn-primary text-base md:text-lg px-6 md:px-8 py-3 md:py-4 flex items-center justify-center space-x-2 w-full sm:w-auto text-center"
+            >
               <span>Learn More</span>
               <ArrowRight size={20} />
             </button>
@@ -69,7 +81,7 @@ export default function HeroSection() {
                 <BookOpen className="text-gold" size={24} />
               </div>
               <h3 className="font-display font-semibold text-navy text-sm md:text-base">Authentic Learning</h3>
-              <p className="text-gray-600 text-xs md:text-sm text-center">Traditional Islamic knowledge with modern teaching methods</p>
+              <p className="text-gray-600 text-xs md:text-sm text-center">Structured study of classical texts with modern pedagogy, assessments, and certification.</p>
             </div>
             
             <div className="flex flex-col items-center space-y-3 animate-fade-in" style={{ animationDelay: '0.2s' }}>

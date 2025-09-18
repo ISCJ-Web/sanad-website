@@ -2,10 +2,33 @@
 
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
-import { getImagePath } from '@/utils/imagePath'
+import { useRouter, usePathname } from 'next/navigation'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const router = useRouter()
+  const pathname = usePathname()
+
+  const scrollToHome = () => {
+    // If we're on the home page, scroll to home section
+    if (pathname === '/') {
+      const homeSection = document.getElementById('home');
+      if (homeSection) {
+        const navbarHeight = 80; // Account for navbar height
+        const elementPosition = homeSection.offsetTop;
+        const offsetPosition = elementPosition - navbarHeight;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    } else {
+      // If we're on a different page, navigate to home page
+      router.push('/');
+    }
+    setIsOpen(false); // Close mobile menu if open
+  };
 
   const navItems = [
     { name: 'Home', href: '#home' },
@@ -21,11 +44,15 @@ export default function Navigation() {
         <div className="flex items-center justify-between py-3 md:py-4 px-4 md:px-6">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="h-8 md:h-10 flex items-center">
-              <img 
-                src={getImagePath("/images/logo/sanad-logo.png")} 
-                alt="Sanad Institute Logo" 
-                className="h-full w-auto object-contain"
+            <button 
+              onClick={scrollToHome}
+              className="h-8 md:h-10 flex items-center cursor-pointer hover:opacity-80 transition-opacity duration-300"
+              aria-label="Go to home section"
+            >
+                      <img
+                        src="/images/logo/sanad-logo.png"
+                        alt="Sanad Institute Logo"
+                        className="h-full w-auto object-contain"
                 onError={(e) => {
                   // Fallback to text logo if image fails to load
                   const target = e.target as HTMLImageElement;
@@ -37,7 +64,7 @@ export default function Navigation() {
               <div className="h-8 md:h-10 w-auto bg-gradient-to-br from-gold to-gold-light rounded-lg flex items-center justify-center px-2 md:px-3 hidden">
                 <span className="text-white font-bold text-sm md:text-lg">Sanad</span>
               </div>
-            </div>
+            </button>
           </div>
 
           {/* Desktop Navigation */}
