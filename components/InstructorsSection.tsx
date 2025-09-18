@@ -27,16 +27,6 @@ const instructors: Instructor[] = [
   },
   {
     id: 2,
-    name: "Dr. Mounia Mnouer",
-    slug: "dr-mounia-mnouer",
-    title: "Arabic Language Specialist",
-    affiliation: "Princeton University",
-    specialization: "Arabic Language & Cross-Cultural Studies",
-    image: "/images/instructors/instructor-1.jpg",
-    bio: "Moroccan academic specializing in Arabic language, curriculum design, and cross-cultural studies. Currently Lecturer in Arabic at Princeton University with extensive teaching experience in Morocco and the United States."
-  },
-  {
-    id: 3,
     name: "Shaykh Ahmed Ashour",
     slug: "shaykh-ahmed-ashour",
     title: "Islamic Studies Scholar",
@@ -46,7 +36,7 @@ const instructors: Instructor[] = [
     bio: "Scholar with classical training at Al-Azhar University. Earned Ijāzah ʿĀliyah in Arabic Language and Islamic Studies, with expertise in fiqh, usūl, hadith, tafsīr, and Arabic linguistics."
   },
   {
-    id: 4,
+    id: 3,
     name: "Shaykh Meurad Osman",
     slug: "shaykh-meurad-osman",
     title: "Islamic Law Instructor",
@@ -54,6 +44,16 @@ const instructors: Instructor[] = [
     specialization: "Hanafi Fiqh & Islamic Theology",
     image: "/images/instructors/instructor-4.jpg",
     bio: "New Jersey native with traditional studies in U.S., Turkey, and Jordan. Graduate degree in Hanafi fiqh from World Islamic Sciences University. Former Imam and current instructor at multiple institutions."
+  },
+  {
+    id: 4,
+    name: "Dr. Mounia Mnouer",
+    slug: "dr-mounia-mnouer",
+    title: "Arabic Language Specialist",
+    affiliation: "Princeton University",
+    specialization: "Arabic Language & Cross-Cultural Studies",
+    image: "/images/instructors/instructor-1.jpg",
+    bio: "Moroccan academic specializing in Arabic language, curriculum design, and cross-cultural studies. Currently Lecturer in Arabic at Princeton University with extensive teaching experience in Morocco and the United States."
   }
 ]
 
@@ -66,8 +66,7 @@ export default function InstructorsSection() {
             Our <span className="text-gradient">Instructors</span>
           </h2>
           <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Learn from distinguished scholars and educators who bring decades of experience 
-            and authentic knowledge to our institute.
+            Learn from distinguished scholars and educators who bring decades of experience.
           </p>
         </div>
 
@@ -85,6 +84,7 @@ export default function InstructorsSection() {
                       src={instructor.image} 
                       alt={instructor.name}
                       className="w-full h-full object-cover rounded-full"
+                      loading="eager"
                       onError={(e) => {
                         // Fallback to initials if image fails to load
                         const target = e.target as HTMLImageElement;

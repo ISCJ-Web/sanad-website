@@ -43,15 +43,9 @@ export default function AboutSection() {
               </div>
               <h3 className="text-2xl font-display font-bold text-navy">Our Vision</h3>
             </div>
-            <p className="text-gray-600 leading-relaxed mb-4">
-              To be a leading Islamic educational institution that bridges the gap between 
-              traditional Islamic scholarship and modern educational excellence, creating 
-              well-rounded individuals who embody Islamic values.
-            </p>
-            <p className="text-gray-600 leading-relaxed">
-              We envision a future where our graduates become ambassadors of peace, 
-              knowledge, and positive change in their communities and beyond.
-            </p>
+                    <p className="text-gray-600 leading-relaxed mb-4">
+                      To nurture a generation of Muslims who embody knowledge, character, and service. We envision graduates who balance faith with life's demands, enriching their own lives and families, while having the opportunity to pursue roles as teachers, imams, scholars, or leaders — all grounded in authentic tradition and prepared to serve and guide their communities.
+                    </p>
           </div>
         </div>
 

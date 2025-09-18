@@ -35,6 +35,7 @@ export default function Navigation() {
     { name: 'About', href: '#about' },
     { name: 'Instructors', href: '#instructors' },
     { name: 'Programs', href: '#programs' },
+    { name: 'Schedule', href: '#schedule' },
     { name: 'Contact', href: '#contact' },
   ]
 

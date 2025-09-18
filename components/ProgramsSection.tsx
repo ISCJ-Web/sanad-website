@@ -18,7 +18,7 @@ const programs: Program[] = [
     title: "Aqidah (Theology) & Tasawwuf (Practice)",
     description: "Comprehensive study of Islamic theology and spiritual development.",
     instructor: "Shaykh Ismail Bowers",
-    text: "Al-Kharida Al-Bahiyyah by Shaykh Ahmad Al-Dardir",
+            text: "Al-Kharida Al-Bahiyyah by Shaykh Ahmad Al-Dardir and Taj al-Arus al-Hawi li Tahdhib al-Nufus by Imam Ibn 'Ata-Illah al-Sakandari",
     level: "Beginner",
     features: [
       "Theological schools & their development",
@@ -190,40 +190,6 @@ export default function ProgramsSection() {
           ))}
         </div>
 
-        {/* Additional Info */}
-        <div className="mt-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-gold to-gold-light rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="text-white" size={32} />
-              </div>
-              <h3 className="text-xl font-display font-bold text-navy mb-2">Small Class Sizes</h3>
-              <p className="text-gray-600 text-sm">
-                Maximum 15 students per class for personalized attention and better learning outcomes.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-gold to-gold-light rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="text-white" size={32} />
-              </div>
-              <h3 className="text-xl font-display font-bold text-navy mb-2">Certified Instructors</h3>
-              <p className="text-gray-600 text-sm">
-                All our instructors are certified scholars with years of teaching experience.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-gold to-gold-light rounded-full flex items-center justify-center mx-auto mb-4">
-                <BookOpen className="text-white" size={32} />
-              </div>
-              <h3 className="text-xl font-display font-bold text-navy mb-2">Flexible Schedule</h3>
-              <p className="text-gray-600 text-sm">
-                Morning, evening, and weekend classes available to accommodate your schedule.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   )

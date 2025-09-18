@@ -28,21 +28,15 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <p className="text-gray-300 mb-6 max-w-md">
-              Dedicated to providing authentic Islamic education and fostering spiritual growth 
-              through comprehensive learning programs and community engagement.
-            </p>
-            <div className="flex space-x-4">
-              <a href="https://www.instagram.com/sanad_institute/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-gold transition-colors">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-gold transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-gold transition-colors">
-                <Twitter size={20} />
-              </a>
-            </div>
+                    <p className="text-gray-300 mb-6 max-w-md">
+                      Dedicated to providing authentic Islamic education and fostering spiritual growth 
+                      through comprehensive learning programs.
+                    </p>
+                    <div className="flex space-x-4">
+                      <a href="https://www.instagram.com/sanad_institute/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-gold transition-colors">
+                        <Instagram size={20} />
+                      </a>
+                    </div>
           </div>
 
           {/* Quick Links */}
@@ -59,44 +53,27 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-display font-semibold mb-4 text-gold">Contact Info</h3>
             <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <MapPin size={16} className="text-gold" />
-                <span className="text-gray-300 text-sm">123 Islamic Center St, City, State 12345</span>
+              <div className="flex items-start space-x-3">
+                <MapPin size={16} className="text-gold mt-1" />
+                <span className="text-gray-300 text-sm">4145 Route 1 South and Promenade Blvd<br />Monmouth Junction, NJ 08852-0628</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone size={16} className="text-gold" />
-                <span className="text-gray-300 text-sm">(555) 123-4567</span>
+                <span className="text-gray-300 text-sm">732-329-6995</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-gold" />
-                <span className="text-gray-300 text-sm">info@sanadinstitute.org</span>
+                <a href="mailto:sanad@iscj.org" className="text-gray-300 text-sm hover:text-white transition-colors">sanad@iscj.org</a>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Newsletter Signup */}
-        <div className="mt-12 pt-8 border-t border-gray-700">
-          <div className="max-w-md mx-auto text-center">
-            <h3 className="text-lg font-display font-semibold mb-4 text-gold">Stay Connected</h3>
-            <p className="text-gray-300 mb-4">Subscribe to our newsletter for updates on events and programs.</p>
-            <div className="flex">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 rounded-l-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gold"
-              />
-              <button className="bg-gold hover:bg-gold-light text-white px-6 py-2 rounded-r-lg transition-colors">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
 
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-gray-700 text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 Sanad Institute. All rights reserved.
+            © 2025 Sanad Institute. All rights reserved.
           </p>
         </div>
       </div>
