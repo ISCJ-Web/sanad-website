@@ -88,30 +88,15 @@ The website is designed to be easily customizable:
 
 ## Deployment
 
-The website is configured for static deployment and GitHub Pages:
+The website is configured for static deployment and is currently deployed via Cloudflare pages
 
-### GitHub Pages Deployment (Recommended)
+### Development
 
-1. **Quick Setup**:
-   ```bash
-   ./setup-github-pages.sh
-   ```
+To mimic deploying to a server (e.g. to confirm everything displays as it should, etc.), run
 
-2. **Manual Setup**:
-   - Update `homepage` field in `package.json` with your GitHub Pages URL
-   - Push code to GitHub repository
-   - Enable GitHub Pages in repository settings (Source: GitHub Actions)
-   - Your site will be available at `https://YOUR_ORG_NAME.github.io/YOUR_REPO_NAME`
-
-3. **Detailed Instructions**: See [DEPLOYMENT.md](./DEPLOYMENT.md)
-
-### Other Static Hosting Options
-
-Deploy the `out` folder to any static hosting service:
-- **Vercel** (recommended for Next.js)
-- **Netlify**
-- **AWS S3**
-- **Any web server**
+```bash
+npm run deploy
+```
 
 ## License
 
