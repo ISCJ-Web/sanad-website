@@ -75,17 +75,16 @@ export default function InstructorsSection() {
           {instructors.map((instructor, index) => (
             <div
               key={instructor.id}
-              className="card p-4 md:p-6 group hover:shadow-2xl transition-all duration-300 animate-fade-in"
+              className="card p-4 md:p-6 group hover:shadow-2xl"
             >
               {/* Profile Image */}
               <div className="relative mb-3 md:mb-4">
-                <div className="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-full bg-gradient-to-br from-gold to-gold-light p-1 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-full bg-gradient-to-br from-gold to-gold-light p-1">
                   <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
                     <img 
                       src={instructor.image} 
                       alt={instructor.name}
                       className="w-full h-full object-cover rounded-full"
-                      loading="eager"
                       onError={(e) => {
                         // Fallback to initials if image fails to load
                         const target = e.target as HTMLImageElement;
@@ -110,7 +109,7 @@ export default function InstructorsSection() {
 
               {/* Content */}
               <div className="text-center relative z-10">
-                <h3 className="text-base md:text-lg font-display font-bold text-navy mb-1 md:mb-2 group-hover:text-gold transition-colors">
+                <h3 className="text-base md:text-lg font-display font-bold text-navy mb-1 md:mb-2">
                   {instructor.name}
                 </h3>
                 <p className="text-gold font-semibold mb-1 md:mb-2 text-xs md:text-sm">{instructor.title}</p>
@@ -131,7 +130,7 @@ export default function InstructorsSection() {
               </div>
 
               {/* Hover Effect Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 rounded-xl pointer-events-none"></div>
             </div>
           ))}
         </div>
