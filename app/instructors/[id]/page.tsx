@@ -25,8 +25,7 @@ const instructors: Instructor[] = [
     affiliation: "Princeton University",
     specialization: "Arabic Language & Cross-Cultural Studies",
     image: "/images/instructors/instructor-1.jpg",
-    bio: "Dr. Mounia Mnouer is a Moroccan academic and educator specializing in Arabic language, curriculum design, and cross-cultural studies.\n\nShe holds a B.A. in English Linguistics from Moulay Ismail University and both an M.A. and Ph.D. from Northern Arizona University, where she also served as Senior Lecturer of Arabic.\n\nShe has taught Arabic language and culture in Morocco and the United States, including at Northern Arizona University and Middlebury College, and she is currently a Lecturer in Arabic at Princeton University.\n\nHer research focuses on intercultural learning, indigenous Amazigh language and culture, and curriculum equity.",
-    email: "mounia@sanadinstitute.org"
+    bio: "Dr. Mounia Mnouer is a Moroccan academic and educator specializing in Arabic language, curriculum design, and cross-cultural studies.\n\nShe holds a B.A. in English Linguistics from Moulay Ismail University and both an M.A. and Ph.D. from Northern Arizona University, where she also served as Senior Lecturer of Arabic.\n\nShe has taught Arabic language and culture in Morocco and the United States, including at Northern Arizona University and Middlebury College, and she is currently a Lecturer in Arabic at Princeton University.\n\nHer research focuses on intercultural learning, indigenous Amazigh language and culture, and curriculum equity."
   },
   {
     id: 2,
@@ -36,8 +35,7 @@ const instructors: Instructor[] = [
     affiliation: "Al-Azhar University",
     specialization: "Islamic Law & Arabic Linguistics",
     image: "/images/instructors/instructor-2.jpg",
-    bio: "Shaykh Ahmed Ashour is a scholar of Islamic studies and the Arabic language with classical training at Al-Azhar University and a career dedicated to teaching and community leadership.\n\nHe began the memorization of the Noble Qur'an at a young age and pursued his formal studies at Al-Azhar's Faculty of Arabic Language, where he earned the Ijāzah ʿĀliyah (Licentiate in Arabic Language and Islamic Studies).\n\nHe went on to complete postgraduate studies at the Higher Institute for Islamic Studies in Cairo and studied under many of Al-Azhar's most distinguished scholars in the fields of fiqh, usūl, hadith, tafsīr, and Arabic linguistics.",
-    email: "ahmed@sanadinstitute.org"
+    bio: "Shaykh Ahmed Ashour is a scholar of Islamic studies and the Arabic language with classical training at Al-Azhar University and a career dedicated to teaching and community leadership.\n\nHe began the memorization of the Noble Qur'an at a young age and pursued his formal studies at Al-Azhar's Faculty of Arabic Language, where he earned the Ijāzah ʿĀliyah (Licentiate in Arabic Language and Islamic Studies).\n\nHe went on to complete postgraduate studies at the Higher Institute for Islamic Studies in Cairo and studied under many of Al-Azhar's most distinguished scholars in the fields of fiqh, usūl, hadith, tafsīr, and Arabic linguistics."
   },
   {
     id: 3,
@@ -47,8 +45,7 @@ const instructors: Instructor[] = [
     affiliation: "University of Oxford",
     specialization: "Hadith Sciences & Islamic Theology",
     image: "/images/instructors/instructor-3.jpg",
-    bio: "Born and raised in Knoxville, Tennessee, Shaykh Ismail Bowers studied for nearly a decade in Morocco, completing the distinguished traditional ʿĀlimiyyah program at the University of Al-Qarawiyyin in Fes, where he received ijāzah in multiple disciplines.\n\nHis studies covered Qur'anic exegesis, Hadith sciences, Islamic law, theology, and Arabic philology under some of Morocco's leading scholars.\n\nHe later earned a Master's degree in Theology from Emory University, graduating top of his class, and is currently pursuing a Ph.D. at the University of Oxford focusing on Hadith and Islamic theology.\n\nAlongside his academic work, Shaykh Ismail is co-founder of Pillars Seminary and has taught hundreds of students in Islamic sciences and Arabic. As Resident Scholar of the Islamic Society of Central Jersey, he brings a blend of traditional scholarship, academic rigor, and community leadership.",
-    email: "ismail@sanadinstitute.org"
+    bio: "Born and raised in Knoxville, Tennessee, Shaykh Ismail Bowers studied for nearly a decade in Morocco, completing the distinguished traditional ʿĀlimiyyah program at the University of Al-Qarawiyyin in Fes, where he received ijāzah in multiple disciplines.\n\nHis studies covered Qur'anic exegesis, Hadith sciences, Islamic law, theology, and Arabic philology under some of Morocco's leading scholars.\n\nHe later earned a Master's degree in Theology from Emory University, graduating top of his class, and is currently pursuing a Ph.D. at the University of Oxford focusing on Hadith and Islamic theology.\n\nAlongside his academic work, Shaykh Ismail is co-founder of Pillars Seminary and has taught hundreds of students in Islamic sciences and Arabic. As Resident Scholar of the Islamic Society of Central Jersey, he brings a blend of traditional scholarship, academic rigor, and community leadership."
   },
   {
     id: 4,
@@ -58,8 +55,7 @@ const instructors: Instructor[] = [
     affiliation: "World Islamic Sciences University",
     specialization: "Hanafi Fiqh & Islamic Theology",
     image: "/images/instructors/instructor-4.jpg",
-    bio: "Shaykh Meurad Osman was born and raised in New Jersey and holds a degree in Sociology from Kean University.\n\nHe pursued traditional studies in the U.S., Turkey, and Jordan, learning from scholars such as Shaykh Zahir Ishaq, Dr. Salah Abdul Haj, and Dr. Muadh Hawa.\n\nHis studies included ʿAqīdah, Hanafi fiqh, tazkiyah, tajwīd, and Arabic. He completed a graduate degree in Hanafi fiqh and usūl at the World Islamic Sciences University in Amman, Jordan, and also served as Imam at the Islamic Center of Ocean County.\n\nCurrently, he teaches with Arkview, Safina Society, Darul Fath, Mecca Center, and Noor Ul-Iman, while continuing to instruct students in Islamic law, theology, and Qur'anic studies.",
-    email: "meurad@sanadinstitute.org"
+    bio: "Shaykh Meurad Osman was born and raised in New Jersey and holds a degree in Sociology from Kean University.\n\nHe pursued traditional studies in the U.S., Turkey, and Jordan, learning from scholars such as Shaykh Zahir Ishaq, Dr. Salah Abdul Haj, and Dr. Muadh Hawa.\n\nHis studies included ʿAqīdah, Hanafi fiqh, tazkiyah, tajwīd, and Arabic. He completed a graduate degree in Hanafi fiqh and usūl at the World Islamic Sciences University in Amman, Jordan, and also served as Imam at the Islamic Center of Ocean County.\n\nCurrently, he teaches with Arkview, Safina Society, Darul Fath, Mecca Center, and Noor Ul-Iman, while continuing to instruct students in Islamic law, theology, and Qur'anic studies."
   }
 ]
 
@@ -95,7 +91,7 @@ export default function InstructorPage({ params }: { params: { id: string } }) {
       {/* Breadcrumb */}
       <div className="pt-20 pb-8 bg-white">
         <div className="container-max">
-          <div className="flex items-center space-x-2 text-sm text-gray-600">
+          <div className="flex items-center space-x-2 text-sm text-gray-600 px-4 sm:px-6 md:px-8 lg:px-0">
             <Link href="/" className="hover:text-gold transition-colors">Home</Link>
             <span>/</span>
             <Link href="/#instructors" className="hover:text-gold transition-colors">Instructors</Link>
@@ -139,14 +135,6 @@ export default function InstructorPage({ params }: { params: { id: string } }) {
                     <BookOpen className="text-gold mr-3" size={20} />
                     <span className="text-lg text-gray-600">{instructor.specialization}</span>
                   </div>
-                  {instructor.email && (
-                    <div className="flex items-center justify-center lg:justify-start">
-                      <Mail className="text-gold mr-3" size={20} />
-                      <a href={`mailto:${instructor.email}`} className="text-lg text-gray-600 hover:text-gold transition-colors">
-                        {instructor.email}
-                      </a>
-                    </div>
-                  )}
                 </div>
 
                 <Link href="/#instructors" className="btn-secondary inline-flex items-center">
@@ -179,24 +167,19 @@ export default function InstructorPage({ params }: { params: { id: string } }) {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Programs Section */}
       <section className="section-padding bg-white">
         <div className="container-max">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-display font-bold text-navy mb-6">
-              Get in Touch
+              View Programs
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Interested in learning from {instructor.name.split(' ')[0]}? Contact us to learn more about our programs and how you can benefit from their expertise.
+              Explore our comprehensive programs and discover how you can benefit from {instructor.name.split(' ')[0]}'s expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={`mailto:${instructor.email}`} className="btn-primary">
-                Send Email
-              </a>
-              <Link href="/#programs" className="btn-secondary">
-                View Programs
-              </Link>
-            </div>
+            <Link href="/#programs" className="btn-primary">
+              View Programs
+            </Link>
           </div>
         </div>
       </section>
