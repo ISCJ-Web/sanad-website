@@ -1,7 +1,7 @@
 'use client'
 
 import { ArrowRight, BookOpen, Award, Clock } from 'lucide-react'
-import { getImagePath } from '@/utils/imagePath'
+
 
 export default function HeroSection() {
   return (
@@ -24,7 +24,7 @@ export default function HeroSection() {
           <div className="mb-6 md:mb-8">
             <div className="w-64 md:w-80 lg:w-96 h-32 md:h-40 lg:h-48 flex items-center justify-center mx-auto mb-4 md:mb-6">
               <img 
-                src={getImagePath("/images/logo/sanad-hero-logo.png")} 
+                src={"/images/logo/sanad-hero-logo.png"} 
                 alt="Sanad Institute Hero Logo" 
                 className="h-full w-auto object-contain"
                 onError={(e) => {

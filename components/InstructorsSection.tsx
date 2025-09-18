@@ -2,7 +2,7 @@
 
 import { GraduationCap, BookOpen, Globe } from 'lucide-react'
 import Link from 'next/link'
-import { getImagePath } from '@/utils/imagePath'
+
 
 interface Instructor {
   id: number
@@ -23,7 +23,7 @@ const instructors: Instructor[] = [
     title: "Resident Scholar",
     affiliation: "University of Oxford",
     specialization: "Hadith Sciences & Islamic Theology",
-    image: getImagePath("/images/instructors/instructor-3.jpg"),
+    image: "/images/instructors/instructor-3.jpg",
     bio: "Completed traditional ʿĀlimiyyah program at Al-Qarawiyyin in Fes, Morocco. Master's from Emory University, currently pursuing Ph.D. at Oxford. Co-founder of Pillars Seminary and Resident Scholar."
   },
   {
@@ -33,7 +33,7 @@ const instructors: Instructor[] = [
     title: "Arabic Language Specialist",
     affiliation: "Princeton University",
     specialization: "Arabic Language & Cross-Cultural Studies",
-    image: getImagePath("/images/instructors/instructor-1.jpg"),
+    image: "/images/instructors/instructor-1.jpg",
     bio: "Moroccan academic specializing in Arabic language, curriculum design, and cross-cultural studies. Currently Lecturer in Arabic at Princeton University with extensive teaching experience in Morocco and the United States."
   },
   {
@@ -43,7 +43,7 @@ const instructors: Instructor[] = [
     title: "Islamic Studies Scholar",
     affiliation: "Al-Azhar University",
     specialization: "Islamic Law & Arabic Linguistics",
-    image: getImagePath("/images/instructors/instructor-2.jpg"),
+    image: "/images/instructors/instructor-2.jpg",
     bio: "Scholar with classical training at Al-Azhar University. Earned Ijāzah ʿĀliyah in Arabic Language and Islamic Studies, with expertise in fiqh, usūl, hadith, tafsīr, and Arabic linguistics."
   },
   {
@@ -53,7 +53,7 @@ const instructors: Instructor[] = [
     title: "Islamic Law Instructor",
     affiliation: "World Islamic Sciences University",
     specialization: "Hanafi Fiqh & Islamic Theology",
-    image: getImagePath("/images/instructors/instructor-4.jpg"),
+    image: "/images/instructors/instructor-4.jpg",
     bio: "New Jersey native with traditional studies in U.S., Turkey, and Jordan. Graduate degree in Hanafi fiqh from World Islamic Sciences University. Former Imam and current instructor at multiple institutions."
   }
 ]

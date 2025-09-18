@@ -1,6 +1,6 @@
 'use client'
 
-import { getImagePath } from '@/utils/imagePath'
+
 
 const universities = [
   {
@@ -10,27 +10,27 @@ const universities = [
   },
   {
     name: "Al-Azhar University",
-    logo: getImagePath("/images/universities/al-azhar-logo.png"),
+    logo: "/images/universities/al-azhar-logo.png",
     alt: "Al-Azhar University Logo"
   },
   {
     name: "University of Oxford",
-    logo: getImagePath("/images/universities/oxford-logo.png"),
+    logo: "/images/universities/oxford-logo.png",
     alt: "University of Oxford Logo"
   },
   {
     name: "Emory University",
-    logo: getImagePath("/images/universities/emory-logo.png"),
+    logo: "/images/universities/emory-logo.png",
     alt: "Emory University Logo"
   },
   {
     name: "World Islamic Sciences University",
-    logo: getImagePath("/images/universities/wisu-logo.png"),
+    logo: "/images/universities/wisu-logo.png",
     alt: "World Islamic Sciences University Logo"
   },
   {
     name: "University of Al-Qarawiyyin",
-    logo: getImagePath("/images/universities/uaq.png"),
+    logo: "/images/universities/uaq.png",
     alt: "University of Al-Qarawiyyin Logo"
   }
 ]
