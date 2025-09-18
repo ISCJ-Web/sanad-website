@@ -73,13 +73,13 @@ export default function ProgramsSection() {
               <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${program.color} opacity-5 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500`}></div>
               
               {/* Icon */}
-              <div className={`w-16 h-16 bg-gradient-to-br ${program.color} rounded-xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform duration-300`}>
+              <div className={`w-16 h-16 bg-gradient-to-br ${program.color} rounded-xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform duration-300 mx-auto`}>
                 {program.icon}
               </div>
 
               {/* Content */}
               <div className="relative z-10">
-                <h3 className="text-xl font-display font-bold text-navy mb-3 group-hover:text-gold transition-colors">
+                <h3 className="text-xl font-display font-bold text-navy mb-3 group-hover:text-gold transition-colors text-center">
                   {program.title}
                 </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">

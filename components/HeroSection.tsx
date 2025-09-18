@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowRight, BookOpen, Users, Heart } from 'lucide-react'
+import { ArrowRight, BookOpen, Award, Clock } from 'lucide-react'
 import { getImagePath } from '@/utils/imagePath'
 
 export default function HeroSection() {
@@ -22,10 +22,10 @@ export default function HeroSection() {
         <div className="max-w-4xl mx-auto">
           {/* Logo */}
           <div className="mb-6 md:mb-8">
-            <div className="w-48 md:w-64 h-24 md:h-32 flex items-center justify-center mx-auto mb-4 md:mb-6">
+            <div className="w-64 md:w-80 lg:w-96 h-32 md:h-40 lg:h-48 flex items-center justify-center mx-auto mb-4 md:mb-6">
               <img 
-                src={getImagePath("/images/logo/sanad-logo.png")} 
-                alt="Sanad Institute Logo" 
+                src={getImagePath("/images/logo/sanad-hero-logo.png")} 
+                alt="Sanad Institute Hero Logo" 
                 className="h-full w-auto object-contain"
                 onError={(e) => {
                   // Fallback to text logo if image fails to load
@@ -44,11 +44,10 @@ export default function HeroSection() {
           {/* Tagline */}
           <div className="mb-6 md:mb-8">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-semibold text-navy-light mb-4 tracking-tight">
-              Discover. Learn. Connect.
+              The Islamic Society of Central Jersey Presents
             </h2>
             <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed px-4">
-              Embark on a transformative journey of Islamic learning where tradition meets contemporary education, 
-              fostering spiritual growth and community connection.
+            Sanad Institute — preserving the timeless chain of Islamic knowledge.
             </p>
           </div>
 
@@ -75,18 +74,18 @@ export default function HeroSection() {
             
             <div className="flex flex-col items-center space-y-3 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <div className="w-12 h-12 md:w-16 md:h-16 bg-gold/10 rounded-full flex items-center justify-center">
-                <Users className="text-gold" size={24} />
+                <Award className="text-gold" size={24} />
               </div>
-              <h3 className="font-display font-semibold text-navy text-sm md:text-base">Community</h3>
-              <p className="text-gray-600 text-xs md:text-sm text-center">Connect with like-minded learners and scholars</p>
+              <h3 className="font-display font-semibold text-navy text-sm md:text-base">Certified Instructors</h3>
+              <p className="text-gray-600 text-xs md:text-sm text-center">All our instructors are certified scholars with years of teaching experience</p>
             </div>
             
             <div className="flex flex-col items-center space-y-3 animate-fade-in" style={{ animationDelay: '0.4s' }}>
               <div className="w-12 h-12 md:w-16 md:h-16 bg-gold/10 rounded-full flex items-center justify-center">
-                <Heart className="text-gold" size={24} />
+                <Clock className="text-gold" size={24} />
               </div>
-              <h3 className="font-display font-semibold text-navy text-sm md:text-base">Spiritual Growth</h3>
-              <p className="text-gray-600 text-xs md:text-sm text-center">Nurture your faith and deepen your understanding</p>
+              <h3 className="font-display font-semibold text-navy text-sm md:text-base">Flexible Schedule</h3>
+              <p className="text-gray-600 text-xs md:text-sm text-center">Morning, evening, and weekend classes available to accommodate your schedule</p>
             </div>
           </div>
         </div>

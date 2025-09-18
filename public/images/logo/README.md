@@ -12,30 +12,33 @@ This folder contains the official Sanad Institute logo files.
 
 ## File Naming Convention
 
-Name your logo file as:
-- `sanad-logo.png` - Main logo file
+Name your logo files as:
+- `sanad-logo.png` - Main logo file (used in navbar and footer)
+- `sanad-hero-logo.png` - Hero section logo (can be different from main logo)
+- `sanad-logo-white.png` - White version for dark backgrounds (footer)
 - `sanad-logo.svg` - Vector version (optional)
-- `sanad-logo-white.png` - White version for dark backgrounds (optional)
 
-## How to Add Logo
+## How to Add Logos
 
-1. **Prepare your logo** according to the requirements above
-2. **Rename it** to `sanad-logo.png` (or appropriate format)
-3. **Upload it** to this folder (`public/images/logo/`)
+1. **Prepare your logos** according to the requirements above
+2. **Rename them** to the appropriate filenames:
+   - `sanad-logo.png` for navbar and general use
+   - `sanad-hero-logo.png` for the hero section
+   - `sanad-logo-white.png` for footer/dark backgrounds
+3. **Upload them** to this folder (`public/images/logo/`)
 4. **Commit and push** to GitHub:
    ```bash
    git add public/images/logo/
-   git commit -m "Add Sanad Institute logo"
+   git commit -m "Add Sanad Institute logos"
    git push origin main
    ```
 
 ## Usage
 
-The logo will be used in:
-- Navigation bar
-- Hero section
-- Footer
-- Any other branding elements
+The logos are used in:
+- **`sanad-logo.png`**: Navigation bar and general branding
+- **`sanad-hero-logo.png`**: Hero section (can be different from main logo)
+- **`sanad-logo-white.png`**: Footer and dark backgrounds
 
 ## Logo Optimization Tips
 
@@ -44,3 +47,4 @@ The logo will be used in:
 - Consider creating both light and dark versions
 - Test how it looks at different sizes
 - Use tools like [TinyPNG](https://tinypng.com/) to compress if needed
+- The hero logo can be larger or have different styling than the navbar logo
