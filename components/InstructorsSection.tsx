@@ -19,29 +19,29 @@ const instructors: Instructor[] = [
     id: 1,
     name: "Shaykh Ismail Bowers",
     slug: "shaykh-ismail-bowers",
-    title: "Resident Scholar",
-    affiliation: "University of Oxford",
-    specialization: "Hadith Sciences & Islamic Theology",
+    title: "ISCJ Resident Scholar",
+    affiliation: "University of Al-Qarawiyyin",
+    specialization: "Theology, Maliki Fiqh, & Spirituality",
     image: "/images/instructors/instructor-3.jpg",
-    bio: "Completed traditional ʿĀlimiyyah program at Al-Qarawiyyin in Fes, Morocco. Master's from Emory University, currently pursuing Ph.D. at Oxford. Co-founder of Pillars Seminary and Resident Scholar."
+    bio: "Completed traditional ʿĀlimiyyah program at Al-Qarawiyyin in Fes, Morocco. Master's from Emory University, currently pursuing Ph.D. at Oxford."
   },
   {
     id: 2,
     name: "Shaykh Ahmed Ashour",
     slug: "shaykh-ahmed-ashour",
-    title: "Islamic Studies Scholar",
+    title: "Scholar of Islamic Sciences",
     affiliation: "Al-Azhar University",
-    specialization: "Islamic Law & Arabic Linguistics",
+    specialization: "Shafi’i Fiqh & Arabic",
     image: "/images/instructors/instructor-2.jpg",
-    bio: "Scholar with classical training at Al-Azhar University. Earned Ijāzah ʿĀliyah in Arabic Language and Islamic Studies, with expertise in fiqh, usūl, hadith, tafsīr, and Arabic linguistics."
+    bio: "Scholar with classical training at Al-Azhar University. Earned Ijāzah ʿĀliyah in the Arabic Language and Islamic Studies, with expertise in Fiqh, Usul, Hadith, Tafsir, and Arabic linguistics."
   },
   {
     id: 3,
     name: "Shaykh Meurad Osman",
     slug: "shaykh-meurad-osman",
-    title: "Islamic Law Instructor",
+    title: "Scholar of Islamic Law",
     affiliation: "World Islamic Sciences University",
-    specialization: "Hanafi Fiqh & Islamic Theology",
+    specialization: "Hanafi Fiqh",
     image: "/images/instructors/instructor-4.jpg",
     bio: "New Jersey native with traditional studies in U.S., Turkey, and Jordan. Graduate degree in Hanafi fiqh from World Islamic Sciences University. Former Imam and current instructor at multiple institutions."
   },
@@ -78,7 +78,7 @@ export default function InstructorsSection() {
             >
               {/* Profile Image */}
               <div className="relative mb-3 md:mb-4">
-                <div className="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-full bg-gradient-to-br from-gold to-gold-light p-1">
+                <div className="w-24 h-24 md:w-28 md:h-28 mx-auto rounded-full bg-gradient-to-br from-gold to-gold-light p-1">
                   <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
                     <img 
                       src={instructor.image} 

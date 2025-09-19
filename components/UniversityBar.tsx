@@ -39,7 +39,7 @@ export default function UniversityBar() {
       <div className="container-max">
         <div className="text-center mb-8">
           <h3 className="text-lg font-display font-semibold text-white mb-2">
-            From the World's Leading Institutions
+            World's Leading Institutions
           </h3>
           <p className="text-sm text-gray-300">
             Our instructors are connected to some of the world's most respected universities and Islamic institutions.
