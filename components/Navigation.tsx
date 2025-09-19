@@ -79,9 +79,14 @@ export default function Navigation() {
                 {item.name}
               </a>
             ))}
-            <button className="btn-primary">
-              Join Us
-            </button>
+                    <a 
+                      href="https://form.jotform.com/252610636338052" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="btn-primary"
+                    >
+                      Join Us
+                    </a>
           </div>
 
           {/* Mobile menu button */}
@@ -109,12 +114,15 @@ export default function Navigation() {
                   {item.name}
                 </a>
               ))}
-              <button 
-                className="btn-primary w-full mt-4"
-                onClick={() => setIsOpen(false)}
-              >
-                Join Us
-              </button>
+                      <a
+                        href="https://form.jotform.com/252610636338052"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-primary w-full mt-4 inline-block text-center"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Join Us
+                      </a>
             </div>
           </div>
         )}

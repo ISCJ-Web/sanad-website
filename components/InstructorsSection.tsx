@@ -15,46 +15,46 @@ interface Instructor {
 }
 
 const instructors: Instructor[] = [
-  {
-    id: 1,
-    name: "Shaykh Ismail Bowers",
-    slug: "shaykh-ismail-bowers",
-    title: "ISCJ Resident Scholar",
-    affiliation: "University of Al-Qarawiyyin",
-    specialization: "Theology, Maliki Fiqh, & Spirituality",
-    image: "/images/instructors/instructor-3.jpg",
-    bio: "Completed traditional ʿĀlimiyyah program at Al-Qarawiyyin in Fes, Morocco. Master's from Emory University, currently pursuing Ph.D. at Oxford."
-  },
-  {
-    id: 2,
-    name: "Shaykh Ahmed Ashour",
-    slug: "shaykh-ahmed-ashour",
-    title: "Scholar of Islamic Sciences",
-    affiliation: "Al-Azhar University",
-    specialization: "Shafi’i Fiqh & Arabic",
-    image: "/images/instructors/instructor-2.jpg",
-    bio: "Scholar with classical training at Al-Azhar University. Earned Ijāzah ʿĀliyah in the Arabic Language and Islamic Studies, with expertise in Fiqh, Usul, Hadith, Tafsir, and Arabic linguistics."
-  },
-  {
-    id: 3,
-    name: "Shaykh Meurad Osman",
-    slug: "shaykh-meurad-osman",
-    title: "Scholar of Islamic Law",
-    affiliation: "World Islamic Sciences University",
-    specialization: "Hanafi Fiqh",
-    image: "/images/instructors/instructor-4.jpg",
-    bio: "New Jersey native with traditional studies in U.S., Turkey, and Jordan. Graduate degree in Hanafi fiqh from World Islamic Sciences University. Former Imam and current instructor at multiple institutions."
-  },
-  {
-    id: 4,
-    name: "Dr. Mounia Mnouer",
-    slug: "dr-mounia-mnouer",
-    title: "Arabic Language Specialist",
-    affiliation: "Princeton University",
-    specialization: "Arabic Language & Cross-Cultural Studies",
-    image: "/images/instructors/instructor-1.jpg",
-    bio: "Moroccan academic specializing in Arabic language, curriculum design, and cross-cultural studies. Currently Lecturer in Arabic at Princeton University with extensive teaching experience in Morocco and the United States."
-  }
+          {
+            id: 1,
+            name: "Shaykh Ismail Bowers",
+            slug: "shaykh-ismail-bowers",
+            title: "ISCJ Resident Scholar",
+            affiliation: "University of Al-Qarawiyyin",
+            specialization: "Theology, Maliki Fiqh, & Spirituality",
+            image: "/images/instructors/instructor-3.jpg",
+            bio: "Completed the traditional ʿAlimiyyah program at Al-Qarawiyyin in Fes, Morocco. Holds a Master's from Emory University and is currently pursuing a Ph.D. at Oxford. Received multiple Ijazahs from leading scholars around the world."
+          },
+          {
+            id: 2,
+            name: "Shaykh Ahmed Ashour",
+            slug: "shaykh-ahmed-ashour",
+            title: "Scholar of Islamic Sciences",
+            affiliation: "Al-Azhar University",
+            specialization: "Shafi'i Fiqh & Arabic",
+            image: "/images/instructors/instructor-2.jpg",
+            bio: "Classically trained at Al-Azhar University. Earned an Ijāzah ʿĀliyah in Arabic Language and Islamic Studies, with expertise in Fiqh, Uṣūl, Ḥadīth, Tafsīr, and Arabic linguistics."
+          },
+          {
+            id: 3,
+            name: "Shaykh Meurad Osman",
+            slug: "shaykh-meurad-osman",
+            title: "Hanafi Law Instructor",
+            affiliation: "World Islamic Sciences University",
+            specialization: "Hanafi Fiqh",
+            image: "/images/instructors/instructor-4.jpg",
+            bio: "Born and raised in New Jersey, he pursued traditional studies in the U.S., Turkey, and Jordan under renowned scholars. He holds a graduate degree in Hanafi Fiqh and Usull from The World Islamic Sciences and Education University in Amman, Jordan."
+          },
+          {
+            id: 4,
+            name: "Dr. Mounia Mnouer",
+            slug: "dr-mounia-mnouer",
+            title: "Arabic Instructor",
+            affiliation: "Princeton University",
+            specialization: "Arabic",
+            image: "/images/instructors/instructor-1.jpg",
+            bio: "Completed a B.A. in Linguistics, an M.A. in Teaching English, and a Ph.D. in Education. Currently serves as Lecturer of Arabic at Princeton University, with expertise in curriculum design and cross-cultural studies."
+          }
 ]
 
 export default function InstructorsSection() {
@@ -74,7 +74,7 @@ export default function InstructorsSection() {
           {instructors.map((instructor, index) => (
             <div
               key={instructor.id}
-              className="card p-4 md:p-6 group hover:shadow-2xl"
+              className="card p-4 md:p-6 group hover:shadow-2xl flex flex-col h-full"
             >
               {/* Profile Image */}
               <div className="relative mb-3 md:mb-4">
@@ -100,15 +100,10 @@ export default function InstructorsSection() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2">
-                  <div className="w-6 h-6 bg-gold rounded-full flex items-center justify-center">
-                    <GraduationCap className="text-white" size={12} />
-                  </div>
-                </div>
               </div>
 
               {/* Content */}
-              <div className="text-center relative z-10">
+              <div className="text-center relative z-10 flex flex-col flex-grow">
                 <h3 className="text-base md:text-lg font-display font-bold text-navy mb-1 md:mb-2">
                   {instructor.name}
                 </h3>
@@ -121,12 +116,14 @@ export default function InstructorsSection() {
                   <BookOpen className="text-gray-400 mr-1 md:mr-2" size={10} />
                   <span className="text-xs text-gray-600">{instructor.specialization}</span>
                 </div>
-                <p className="text-gray-600 text-xs md:text-sm leading-relaxed mb-3 md:mb-4">
+                <p className="text-gray-600 text-xs md:text-sm leading-relaxed mb-3 md:mb-4 flex-grow">
                   {instructor.bio}
                 </p>
-                <Link href={`/instructors/${instructor.slug}`} className="btn-secondary text-xs px-3 md:px-4 py-1.5 md:py-2 relative z-20">
-                  Learn More
-                </Link>
+                <div className="mt-auto">
+                  <Link href={`/instructors/${instructor.slug}`} className="btn-secondary text-xs px-3 md:px-4 py-1.5 md:py-2 relative z-20">
+                    Learn More
+                  </Link>
+                </div>
               </div>
 
               {/* Hover Effect Overlay */}
@@ -138,16 +135,20 @@ export default function InstructorsSection() {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <div className="card p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-display font-bold text-navy mb-4">
-              Ready to Learn from Our Scholars?
-            </h3>
-            <p className="text-gray-600 mb-6">
-              Join our community of learners and benefit from the wisdom and guidance 
-              of our experienced instructors.
-            </p>
-            <button className="btn-primary">
+                    <h3 className="text-2xl font-display font-bold text-navy mb-4">
+                      Join Our Learning Community
+                    </h3>
+                    <p className="text-gray-600 mb-6">
+                      Study with experienced instructors and connect with fellow students on a journey of knowledge and growth.
+                    </p>
+            <a 
+              href="https://form.jotform.com/252610636338052" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
               Enroll Now
-            </button>
+            </a>
           </div>
         </div>
       </div>

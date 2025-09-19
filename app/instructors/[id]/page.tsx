@@ -21,41 +21,45 @@ const instructors: Instructor[] = [
     id: 1,
     name: "Dr. Mounia Mnouer",
     slug: "dr-mounia-mnouer",
-    title: "Arabic Language Specialist",
+    title: "Arabic Instructor",
     affiliation: "Princeton University",
-    specialization: "Arabic Language & Cross-Cultural Studies",
+    specialization: "Arabic",
     image: "/images/instructors/instructor-1.jpg",
-    bio: "Dr. Mounia Mnouer is a Moroccan academic and educator specializing in Arabic language, curriculum design, and cross-cultural studies.\n\nShe holds a B.A. in English Linguistics from Moulay Ismail University and both an M.A. and Ph.D. from Northern Arizona University, where she also served as Senior Lecturer of Arabic.\n\nShe has taught Arabic language and culture in Morocco and the United States, including at Northern Arizona University and Middlebury College, and she is currently a Lecturer in Arabic at Princeton University.\n\nHer research focuses on intercultural learning, indigenous Amazigh language and culture, and curriculum equity."
+    bio: "Dr. Mounia Mnouer is a Moroccan academic and educator specializing in Arabic language, curriculum design, and cross-cultural studies.\n\nShe holds a B.A. in English Linguistics from Moulay Ismail University and both an M.A. and Ph.D. from Northern Arizona University, where she also served as Senior Lecturer of Arabic.\n\nShe has taught Arabic language and culture in Morocco and the United States, including at Northern Arizona University and Middlebury College, and she is currently a Lecturer in Arabic at Princeton University.\n\nHer research focuses on intercultural learning, indigenous Amazigh language and culture, and curriculum equity.",
+    email: "mounia.mnouer@iscj.org"
   },
   {
     id: 2,
     name: "Shaykh Ahmed Ashour",
     slug: "shaykh-ahmed-ashour",
-    title: "Islamic Studies Scholar",
+    title: "Scholar of Islamic Sciences",
     affiliation: "Al-Azhar University",
-    specialization: "Islamic Law & Arabic Linguistics",
+    specialization: "Shafi'i Fiqh & Arabic",
     image: "/images/instructors/instructor-2.jpg",
-    bio: "Shaykh Ahmed Ashour is a scholar of Islamic studies and the Arabic language with classical training at Al-Azhar University and a career dedicated to teaching and community leadership.\n\nHe began the memorization of the Noble Qur'an at a young age and pursued his formal studies at Al-Azhar's Faculty of Arabic Language, where he earned the Ijāzah ʿĀliyah (Licentiate in Arabic Language and Islamic Studies).\n\nHe went on to complete postgraduate studies at the Higher Institute for Islamic Studies in Cairo and studied under many of Al-Azhar's most distinguished scholars in the fields of fiqh, usūl, hadith, tafsīr, and Arabic linguistics."
+    bio: "Shaykh Ahmed Ashour is a scholar of Islamic studies and the Arabic language with classical training at Al-Azhar University and a career dedicated to teaching and community leadership.\n\nHe began the memorization of the Noble Qur'an at a young age and pursued his formal studies at Al-Azhar's Faculty of Arabic Language, where he earned the Ijāzah ʿĀliyah (Licentiate in Arabic Language and Islamic Studies).\n\nHe went on to complete postgraduate studies at the Higher Institute for Islamic Studies in Cairo and studied under many of Al-Azhar's most distinguished scholars in the fields of fiqh, usūl, hadith, tafsīr, and Arabic linguistics.",
+    email: "ahmed.ashour@iscj.org"
   },
   {
     id: 3,
     name: "Shaykh Ismail Bowers",
     slug: "shaykh-ismail-bowers",
-    title: "Resident Scholar",
-    affiliation: "University of Oxford",
-    specialization: "Hadith Sciences & Islamic Theology",
+    title: "ISCJ Resident Scholar",
+    affiliation: "University of Al-Qarawiyyin",
+    specialization: "Theology, Maliki Fiqh, & Spirituality",
     image: "/images/instructors/instructor-3.jpg",
-    bio: "Born and raised in Knoxville, Tennessee, Shaykh Ismail Bowers studied for nearly a decade in Morocco, completing the distinguished traditional ʿĀlimiyyah program at the University of Al-Qarawiyyin in Fes, where he received ijāzah in multiple disciplines.\n\nHis studies covered Qur'anic exegesis, Hadith sciences, Islamic law, theology, and Arabic philology under some of Morocco's leading scholars.\n\nHe later earned a Master's degree in Theology from Emory University, graduating top of his class, and is currently pursuing a Ph.D. at the University of Oxford focusing on Hadith and Islamic theology.\n\nAlongside his academic work, Shaykh Ismail is co-founder of Pillars Seminary and has taught hundreds of students in Islamic sciences and Arabic. As Resident Scholar of the Islamic Society of Central Jersey, he brings a blend of traditional scholarship, academic rigor, and community leadership."
+    bio: "Born and raised in Knoxville, Tennessee, Shaykh Ismail Bowers studied for nearly a decade in Morocco, completing the distinguished traditional ʿĀlimiyyah program at the University of Al-Qarawiyyin in Fes, where he received ijāzah in multiple disciplines.\n\nHis studies covered Qur'anic exegesis, Hadith sciences, Islamic law, theology, and Arabic philology under some of Morocco's leading scholars.\n\nHe later earned a Master's degree in Theology from Emory University, graduating top of his class, and is currently pursuing a Ph.D. at the University of Oxford focusing on Hadith and Islamic theology.\n\nAlongside his academic work, Shaykh Ismail is co-founder of Pillars Seminary and has taught hundreds of students in Islamic sciences and Arabic. As Resident Scholar of the Islamic Society of Central Jersey, he brings a blend of traditional scholarship, academic rigor, and community leadership.",
+    email: "ismail.bowers@iscj.org"
   },
   {
     id: 4,
     name: "Shaykh Meurad Osman",
     slug: "shaykh-meurad-osman",
-    title: "Islamic Law Instructor",
+    title: "Hanafi Law Instructor",
     affiliation: "World Islamic Sciences University",
-    specialization: "Hanafi Fiqh & Islamic Theology",
+    specialization: "Hanafi Fiqh",
     image: "/images/instructors/instructor-4.jpg",
-    bio: "Shaykh Meurad Osman was born and raised in New Jersey and holds a degree in Sociology from Kean University.\n\nHe pursued traditional studies in the U.S., Turkey, and Jordan, learning from scholars such as Shaykh Zahir Ishaq, Dr. Salah Abdul Haj, and Dr. Muadh Hawa.\n\nHis studies included ʿAqīdah, Hanafi fiqh, tazkiyah, tajwīd, and Arabic. He completed a graduate degree in Hanafi fiqh and usūl at the World Islamic Sciences University in Amman, Jordan, and also served as Imam at the Islamic Center of Ocean County.\n\nCurrently, he teaches with Arkview, Safina Society, Darul Fath, Mecca Center, and Noor Ul-Iman, while continuing to instruct students in Islamic law, theology, and Qur'anic studies."
+    bio: "Shaykh Meurad Osman was born and raised in New Jersey and holds a degree in Sociology from Kean University.\n\nHe pursued traditional studies in the U.S., Turkey, and Jordan, learning from scholars such as Shaykh Zahir Ishaq, Dr. Salah Abdul Haj, and Dr. Muadh Hawa.\n\nHis studies included ʿAqīdah, Hanafi fiqh, tazkiyah, tajwīd, and Arabic. He completed a graduate degree in Hanafi fiqh and usūl at the World Islamic Sciences University in Amman, Jordan, and also served as Imam at the Islamic Center of Ocean County.\n\nCurrently, he teaches with Arkview, Safina Society, Darul Fath, Mecca Center, and Noor Ul-Iman, while continuing to instruct students in Islamic law, theology, and Qur'anic studies.",
+    email: "meurad.osman@iscj.org"
   }
 ]
 
@@ -135,6 +139,14 @@ export default function InstructorPage({ params }: { params: { id: string } }) {
                     <BookOpen className="text-gold mr-3" size={20} />
                     <span className="text-lg text-gray-600">{instructor.specialization}</span>
                   </div>
+                  {instructor.email && (
+                    <div className="flex items-center justify-center lg:justify-start">
+                      <Mail className="text-gold mr-3" size={20} />
+                      <a href={`mailto:${instructor.email}`} className="text-lg text-gray-600 hover:text-gold transition-colors">
+                        {instructor.email}
+                      </a>
+                    </div>
+                  )}
                 </div>
 
                 <Link href="/#instructors" className="btn-secondary inline-flex items-center">

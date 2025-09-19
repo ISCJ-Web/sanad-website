@@ -1,4 +1,6 @@
-import { BookOpen, Clock, Users, Award, ArrowRight, User, Heart, Scale, GraduationCap, Type, PenTool } from 'lucide-react'
+'use client'
+
+import { BookOpen, Clock, Users, Award, ArrowRight, User } from 'lucide-react'
 
 interface Program {
   id: number
@@ -8,83 +10,75 @@ interface Program {
   text: string
   level: string
   features: string[]
-  icon: React.ReactNode
+  iconImage: string
   color: string
 }
 
 const programs: Program[] = [
   {
     id: 1,
-    title: "Aqidah (Theology) & Tasawwuf (Practice)",
-    description: "Comprehensive study of Islamic theology and spiritual development.",
+    title: "Aqidah & Tasawwuf",
+    description: "Islamic theology and Spirituality.",
     instructor: "Shaykh Ismail Bowers",
-            text: "Al-Kharida Al-Bahiyyah by Shaykh Ahmad Al-Dardir and Taj al-Arus al-Hawi li Tahdhib al-Nufus by Imam Ibn 'Ata-Illah al-Sakandari",
+    text: "Al-Kharida Al-Bahiyyah & Taj Al-Arus",
     level: "Beginner",
     features: [
-      "Theological schools & their development",
-      "Attributes of Allah, Prophets, angels, books, Day of Judgement, Destiny",
+      "Core beliefs & theological schools",
       "Key debates & differences",
-      "Illnesses of the heart & purification",
-      "The path to Allah"
+      "Purification of the heart & path to Allah"
     ],
-    icon: <Heart size={32} />,
+    iconImage: "/images/class icons/theology.png",
     color: "from-blue-500 to-blue-600"
   },
   {
     id: 2,
-    title: "Fiqh - Maliki",
-    description: "Study of Islamic jurisprudence according to the Maliki school of thought.",
+    title: "Maliki Fiqh",
+    description: "Islamic jurisprudence according to the Maliki Madhhab",
     instructor: "Shaykh Ismail Bowers",
-    text: "Classical Maliki texts",
+    text: "Al-Murshid Al-Mu'in",
     level: "Beginner",
     features: [
-      "Purification",
-      "Prayer",
-      "Zakah",
-      "Fasting",
-      "Hajj"
+      "Core acts of worship: Salah to Hajj",
+      "Methodologies of the Maliki school of law",
+      "Practical application in daily life"
     ],
-    icon: <Scale size={32} />,
+    iconImage: "/images/class icons/maliki.png",
     color: "from-green-500 to-green-600"
   },
   {
     id: 3,
-    title: "Fiqh - Shafi",
-    description: "Study of Islamic jurisprudence according to the Shafi school of thought.",
+    title: "Shafi'i Fiqh",
+    description: "Islamic jurisprudence according to the Shafi'i Madhhab",
     instructor: "Shaykh Ahmed Ashour",
-    text: "Classical Shafi texts",
+    text: "Matn Abi Shuja'",
     level: "Beginner",
     features: [
-      "Purification",
-      "Prayer",
-      "Zakah",
-      "Fasting",
-      "Hajj"
+      "Core acts of worship: Salah to Hajj",
+      "Methodologies of the Shafi'i school of law",
+      "Practical application in daily life"
     ],
-    icon: <Scale size={32} />,
+    iconImage: "/images/class icons/shafi.png",
     color: "from-purple-500 to-purple-600"
   },
   {
     id: 4,
-    title: "Fiqh - Hanafi",
-    description: "Study of Islamic jurisprudence according to the Hanafi school of thought.",
+    title: "Hanafi Fiqh",
+    description: "Islamic jurisprudence according to the Hanafi Madhhab",
     instructor: "Shaykh Meurad Osman",
-    text: "Classical Hanafi texts",
+    text: "Maraqi 'l-Sa'adat",
     level: "Beginner",
     features: [
-      "Purification",
-      "Prayer",
-      "Zakah",
-      "Fasting",
-      "Hajj"
+      "Core acts of worship: Salah to Hajj",
+      "Methodologies of the Hanafi school of law",
+      "Practical application in daily life"
     ],
-    icon: <Scale size={32} />,
+    iconImage: "/images/class icons/hanafi.png",
     color: "from-orange-500 to-orange-600"
   },
   {
     id: 5,
     title: "Arabic (Beginner)",
-    description: "Foundational Arabic language study for beginners.",
+    description: "Foundational Study of Arabic",
     instructor: "Dr. Mounia Mnouer",
     text: "Al 'Arabiyya Bayna Yadayk",
     level: "Beginner",
@@ -94,15 +88,15 @@ const programs: Program[] = [
       "Reading & Listening Skills",
       "Speaking & Conversation Practice"
     ],
-    icon: <Type size={32} />,
+    iconImage: "/images/class icons/arabic beginner.png",
     color: "from-teal-500 to-teal-600"
   },
   {
     id: 6,
     title: "Arabic (Intermediate)",
-    description: "Intermediate Arabic language study building on foundational knowledge.",
+    description: "Intermediate Arabic language study",
     instructor: "Shaykh Ahmed Ashour",
-    text: "Qatr al-Nada wa Ball al-Sada by Imam Ibn Hisham",
+    text: "Qatr Al-Nada",
     level: "Intermediate",
     features: [
       "Word Classification & Grammar Basics",
@@ -110,7 +104,7 @@ const programs: Program[] = [
       "Complex Constructions",
       "Reading & Fluency"
     ],
-    icon: <PenTool size={32} />,
+    iconImage: "/images/class icons/arabic advanced.png",
     color: "from-indigo-500 to-indigo-600"
   }
 ]
@@ -140,8 +134,21 @@ export default function ProgramsSection() {
               <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${program.color} opacity-5 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500`}></div>
               
               {/* Icon */}
-              <div className={`w-16 h-16 bg-gradient-to-br ${program.color} rounded-xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform duration-300 mx-auto`}>
-                {program.icon}
+              <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 mx-auto p-3 shadow-sm border border-gray-100">
+                <img
+                  src={program.iconImage}
+                  alt={`${program.title} icon`}
+                  className="w-full h-full object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const fallback = target.nextElementSibling as HTMLElement;
+                    if (fallback) fallback.style.display = 'flex';
+                  }}
+                />
+                <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg flex items-center justify-center hidden">
+                  <span className="text-gray-500 font-bold text-xs">Icon</span>
+                </div>
               </div>
 
               {/* Content */}

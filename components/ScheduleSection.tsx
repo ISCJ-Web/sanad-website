@@ -77,11 +77,8 @@ export default function ScheduleSection() {
       <div className="container-max">
         <div className="text-center mb-12 md:mb-16 px-4">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-navy mb-4 md:mb-6 tracking-tight">
-            Our <span className="text-gradient">Schedule</span>
+            Weekly <span className="text-gradient">Schedule</span>
           </h2>
-          <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Weekly class schedule featuring our comprehensive Islamic studies and Arabic language programs.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 max-w-6xl mx-auto px-4">
@@ -117,38 +114,17 @@ export default function ScheduleSection() {
                 {item.course}
               </h5>
 
-              {/* Time */}
-              {!item.isNoClass && (
-                <div className="flex items-center justify-center text-xs text-gray-600">
-                  <Clock className="mr-1" size={12} />
-                  <span>{item.time}</span>
-                </div>
-              )}
+                      {/* Time */}
+                      {!item.isNoClass && (
+                        <div className="flex items-center justify-center text-sm md:text-base text-gray-600">
+                          <Clock className="mr-1" size={12} />
+                          <span>{item.time}</span>
+                        </div>
+                      )}
             </div>
           ))}
         </div>
 
-        {/* Additional Info */}
-        <div className="mt-12 text-center">
-          <div className="card p-6 md:p-8 max-w-2xl mx-auto">
-            <div className="flex items-center justify-center mb-4">
-              <Calendar className="text-gold mr-3" size={24} />
-              <h3 className="text-xl font-display font-bold text-navy">
-                Class Information
-              </h3>
-            </div>
-            <p className="text-gray-600 mb-4">
-              All classes are held at the Islamic Society of Central Jersey.</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600">
-              <div>
-                <strong className="text-navy">Evening Classes:</strong> 7:00 - 8:30 PM
-              </div>
-              <div>
-                <strong className="text-navy">Weekend Classes:</strong> 9:00 - 10:30 AM
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   )

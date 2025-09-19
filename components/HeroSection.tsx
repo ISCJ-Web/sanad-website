@@ -55,9 +55,9 @@ export default function HeroSection() {
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-semibold text-navy-light mb-4 tracking-tight">
               The Islamic Society of Central Jersey Presents
             </h2>
-            <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed px-4">
-            Sanad Institute — preserving the timeless chain of Islamic knowledge.
-            </p>
+                    <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed px-4">
+                      Sanad Institute — Rooted in tradition, relevant for today.
+                    </p>
           </div>
 
           {/* CTA Buttons */}
@@ -69,9 +69,14 @@ export default function HeroSection() {
               <span>Learn More</span>
               <ArrowRight size={20} />
             </button>
-            <button className="btn-secondary text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto text-center">
-              Join Us Today
-            </button>
+                    <a 
+                      href="https://form.jotform.com/252610636338052" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="btn-secondary text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto text-center inline-block"
+                    >
+                      Join Us Today
+                    </a>
           </div>
 
           {/* Feature Icons */}
@@ -88,8 +93,8 @@ export default function HeroSection() {
               <div className="w-12 h-12 md:w-16 md:h-16 bg-gold/10 rounded-full flex items-center justify-center">
                 <Award className="text-gold" size={24} />
               </div>
-              <h3 className="font-display font-semibold text-navy text-sm md:text-base">Certified Instructors</h3>
-              <p className="text-gray-600 text-xs md:text-sm text-center">All our instructors are certified scholars with years of teaching experience</p>
+              <h3 className="font-display font-semibold text-navy text-sm md:text-base">Qualified Instructors</h3>
+              <p className="text-gray-600 text-xs md:text-sm text-center">All our instructors are certified with years of teaching experience</p>
             </div>
             
             <div className="flex flex-col items-center space-y-3 animate-fade-in" style={{ animationDelay: '0.4s' }}>
