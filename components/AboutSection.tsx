@@ -6,7 +6,7 @@ export default function AboutSection() {
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-display font-bold text-navy mb-6 tracking-tight">
-            About <span className="text-gradient">Sanad Institute</span>
+            About <span className="text-gradient">Sanad</span>
           </h2>
         </div>
 

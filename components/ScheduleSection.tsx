@@ -58,7 +58,7 @@ const scheduleData: ScheduleItem[] = [
   {
     day: "SATURDAYS",
     instructor: "SHAYKH ISMAIL BOWERS",
-    course: "ISLAMIC STUDIES I",
+    course: "AQIDAH & TASAWWUF",
     time: "9 - 10:30 AM",
     instructorImage: ""
   },

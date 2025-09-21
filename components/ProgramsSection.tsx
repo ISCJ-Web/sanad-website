@@ -18,7 +18,7 @@ const programs: Program[] = [
   {
     id: 1,
     title: "Aqidah & Tasawwuf",
-    description: "Islamic theology and Spirituality.",
+    description: "Islamic theology & Spirituality.",
     instructor: "Shaykh Ismail Bowers",
     text: "Al-Kharida Al-Bahiyyah & Taj Al-Arus",
     level: "Beginner",

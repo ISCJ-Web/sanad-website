@@ -19,14 +19,6 @@ export default function HeroSection() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-20 pb-16 md:pb-20">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-32 h-32 border border-gold rounded-full"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 border border-navy rounded-full"></div>
-        <div className="absolute bottom-40 left-20 w-40 h-40 border border-gold rounded-full"></div>
-        <div className="absolute bottom-20 right-10 w-28 h-28 border border-navy rounded-full"></div>
-      </div>
-
       <div className="container-max text-center z-10 px-4">
         <div className="max-w-4xl mx-auto">
           {/* Logo */}
